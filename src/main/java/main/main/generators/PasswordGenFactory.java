@@ -1,4 +1,4 @@
-package main;
+package main.main.generators;
 
 class PasswordGenFactory {
 
@@ -14,7 +14,8 @@ class PasswordGenFactory {
                 return new PasswordGeneratorFull();
 
         }
-        throw new NullPointerException();  // stworz wlasny exception
+        return null;
+ //       throw new NullPointerException();  // stworz wlasny exception
     }
 
 }

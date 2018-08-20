@@ -1,8 +1,8 @@
 package passwordWizardTest;
 
-import main.PasswordGeneratorFull;
-import main.PasswordGeneratorLettersOnly;
-import main.PasswordGeneratorLettresNumbers;
+import main.main.generators.PasswordGeneratorFull;
+import main.main.generators.PasswordGeneratorLettersOnly;
+import main.main.generators.PasswordGeneratorLettresNumbers;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
