@@ -5,8 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
 
-        System.out.println(PasswordGenerator.generatePassword1(32));
+PasswordGeneratorFacade passwordGeneratorFacade = new PasswordGeneratorFacade();
 
+        System.out.println(passwordGeneratorFacade.generatePassword(32,GeneratorType.LettersOnly));
     }
 
 }
