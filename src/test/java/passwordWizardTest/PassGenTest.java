@@ -1,14 +1,18 @@
 package passwordWizardTest;
 
+
 import main.PasswordGeneratorFull;
 import main.PasswordGeneratorLettersOnly;
 import main.PasswordGeneratorLettresNumbers;
+
+import main.PasswordGenerator;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 public class PassGenTest {
 
-    @Test
+     @Test
     public void checkIfCharactersInBoundsPass1() {
 
         PasswordGeneratorFull gen = new PasswordGeneratorFull();

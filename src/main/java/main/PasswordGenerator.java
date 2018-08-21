@@ -1,5 +1,6 @@
 package main;
 
+
 public interface PasswordGenerator {
 
 
