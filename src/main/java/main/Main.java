@@ -23,8 +23,8 @@ public class Main {
         passwordGeneratorFacade.generatePassword(30,GeneratorType.LettersNumbersSpecialChars);
 
         FileSaver fileSaver = new FileSaver();
-        fileSaver.csvWriterOneByOne(passwordEntryFacade.generatePasswordEntry("Facebook", "MietekMotyka", 32,
-                GeneratorType.LettersNumbersSpecialChars));
+        fileSaver.csvWriterOneByOne(passwordEntryFacade.generatePasswordEntry("Facebook", "MietekMotyka",
+                32, GeneratorType.LettersNumbersSpecialChars));
 
     }
 
