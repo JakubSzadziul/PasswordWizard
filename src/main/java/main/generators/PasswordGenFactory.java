@@ -1,4 +1,4 @@
-package main.main.generators;
+package main.generators;
 
 class PasswordGenFactory {
 
