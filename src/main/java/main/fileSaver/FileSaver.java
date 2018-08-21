@@ -31,9 +31,4 @@ public class FileSaver {
         }
     }
 
-//    public String csvWriterOneByOne() throws Exception{
-//        Path path = Paths.get(
-//                ClassLoader.getSystemResource("csv/writtenOneByOne.csv").toURI());
-//        return CsvWriterExamples.csvWriterOneByOne(Helpers.fourColumnCsvString(), path);
-//    }
 
