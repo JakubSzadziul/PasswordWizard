@@ -1,20 +1,27 @@
 package main.userConsoleInterface;
 
-import main.fileSaver.BufferedFileReader;
+import main.filesProcessing.BufferedFileReader;
+import main.filesProcessing.FileSaver;
 import main.generators.GeneratorType;
 import main.model.PasswordEntryFacade;
 
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserInterface {
 
     private Scanner scanner = new Scanner(System.in);
-    private String userInput;
     private int userInputInt;
-    private PasswordEntryFacade passwordEntryFacade = new PasswordEntryFacade();
-    private BufferedFileReader bufferedFileReader = new BufferedFileReader();
+    private PasswordEntryFacade passwordEntryFacade;
+    private BufferedFileReader bufferedFileReader;
+    private FileSaver fileSaver;
+
+    public UserInterface() {
+
+        this.passwordEntryFacade = new PasswordEntryFacade();
+        this.bufferedFileReader = new BufferedFileReader();
+        this.fileSaver = new FileSaver();
+    }
 
     public void userInterface() {
         boolean quit = true;
@@ -59,17 +66,23 @@ public class UserInterface {
                             break;
                     }
 
-                    passwordEntryFacade.generatePasswordEntry(website, login, numberOfChars, generatorType);
 
-                    System.out.println("Password Added!");
-
-                case 2:
                     try {
-                        bufferedFileReader.read
-                                ("C:/Users/SZA/IdeaProjects/PasswordWizard2/src/main/resources/Passwords.csv");
+                        fileSaver.csvWriterOneByOne(passwordEntryFacade.generatePasswordEntry(website, login, numberOfChars, generatorType));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+
+
+                    System.out.println("Password Added!");
+                    break;
+                case 2:
+                    try {
+                        System.out.println(bufferedFileReader.read("Passwords.csv"));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
             }
         }
     }

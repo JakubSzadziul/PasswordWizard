@@ -9,7 +9,6 @@ public class PasswordGeneratorFacade {
     }
 
    public String generatePassword (int length, GeneratorType generatorType){
-
         return factory.getPassword(length,generatorType).generatePassword(length).toString();
     }
 }
